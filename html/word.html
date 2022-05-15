@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Text Analizer</title>
+<head>
+<body>
+<center>
+<table  cellpadding="15" bgcolor='#228899'>
+	<th><font size='9'color='#993399'>Text Analizer</font></th>
+	<th><font size='6'color='#993399'>Home</font></th>
+	<th><font size='6'color='#993399'>About</font></th>
+	<th><font size='6'color='#993399'>Contact</font></th>
+	<th align="right " width="50%">
+	<form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"><font size='4'>Search</font></button>
+    </form>
+	</th>
+</table>
+</center>
+<form action='/about'method='post'>{% csrf_token %}
+<center>
+	<font size='5'>devops</font><br>
+	<textarea name='text'style="margin: 0px; width: 595px; height: 159px;", placeholder="Enter the text hear" ></textarea><br>
+</center>
+
+<center>
+	
+  		<input type="checkbox" name="upper" class="custom-control-input" id="customSwitch1">
+  		<label class="custom-control-label" for="customSwitch1">UPPER CASE</label> <br>
+	
+	
+  		<input type="checkbox" name="lineremove" class="custom-control-input" id="customSwitch2">
+  		<label class="custom-control-label" for="customSwitch2">Remove Extra line</label> <br>
+	
+  		<input type="checkbox" name="remove" class="custom-control-input" id="customSwitch3">
+  		<label class="custom-control-label" for="customSwitch3">Remove Punctuations</label> <br>
+	
+  		<input type="checkbox" name="spremove" class="custom-control-input" id="customSwitch4">
+  		<label class="custom-control-label" for="customSwitch4">Remove Space</label> <br>
+	
+  		<input type="checkbox" name="count" class="custom-control-input" id="customSwitch5">
+  		<label class="custom-control-label" for="customSwitch5">Count Character</label> <br><br>
+
+  	<form class="d-flex">
+        <button type="submit">Analize</button>
+    </form>
+	
+</center>
+</form>
+</body>
+</html>
